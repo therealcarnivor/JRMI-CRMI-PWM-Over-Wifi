@@ -70,28 +70,10 @@ void setup() {
 }
 
 void loop() {
-  // 1: main processing node of cmri library
   
   waitForJMRI();
 
- // UpdateSensors();
-
   cmri.process();
-
-
-  // 2: update output. Reads bit 0 of T packet and sets the LED to this
-//  int led = cmri.get_bit(0);
-//  //Serial.println("LED state "+String(led));
-//  if (led == 0) {
-//    digitalWrite(LED_BUILTIN, LOW);
-//    digitalWrite(12, LOW);
-//  }
-//
-//  else {
-//    digitalWrite(LED_BUILTIN, HIGH);
-//    digitalWrite(12, HIGH);
-//  }
-
 
   for (int i = 0; i < numServos; i++) {
       Status[i] = (cmri.get_bit(i));
@@ -103,7 +85,6 @@ void loop() {
       }
   }
 
-  
 }
 
 bool waitForJMRI() {
@@ -124,6 +105,3 @@ void InitialiseConfig() {
   pinMode(12, OUTPUT);
 }
 
-void UpdateSensors() {
-  cmri.set_bit(0, digitalRead(23));
-}
