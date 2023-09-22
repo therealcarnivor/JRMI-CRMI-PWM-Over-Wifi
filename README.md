@@ -11,3 +11,4 @@ PCA9685 - https://www.amazon.co.uk/dp/B093LB85QK?psc=1&ref=ppx_yo2ov_dt_b_produc
 
 ESP32S - https://www.amazon.co.uk/dp/B08DR5T897?psc=1&ref=ppx_yo2ov_dt_b_product_details
 
+The Example script is for 6 Turnouts 
